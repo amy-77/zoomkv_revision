@@ -1,0 +1,485 @@
+{
+  "schema_version": 2,
+  "snapshot_time_utc": "2026-10-12T06:47:29.134211+00:00",
+  "source_host": "bm-ksyun-qy-zonea-d-h20-141g-9-57",
+  "source_root": "/DATA/disk0/qyl/code/zoomkv_revision_migrated_20261008/results/urania_correct_20261011",
+  "selection_rule": "Deduplicate by qid; shard records supersede overlapping base records. Only exact expected-qid coverage without conflicts is publishable; partial accuracy is diagnostic.",
+  "summary": {
+    "cells": 8,
+    "status_counts": {
+      "complete": 2,
+      "stopped_incomplete": 6
+    }
+  },
+  "scheduler": {
+    "path": "/DATA/disk0/qyl/code/zoomkv_revision_migrated_20261008/results/urania_correct_20261011/run0_sharded_scheduler.log",
+    "exists": true,
+    "bytes": 1802,
+    "sha256": "c56f3932dcb14cf833e2c19475cdaf50419adb55cff3f30ffc064657a7882d1a",
+    "mtime_utc": "2026-10-12T03:50:03.731282+00:00",
+    "sigterm_observed": true,
+    "signal_lines": [
+      "[signal] received 15; terminating workers"
+    ],
+    "tail": [
+      "[launch] gpu=2 pid=88635 Qwen3-4B_math500_pariskv_run0_shard1",
+      "[launch] gpu=3 pid=88651 Qwen3-8B_math500_pariskv_run0_shard0",
+      "[launch] gpu=3 pid=88664 Qwen3-8B_math500_pariskv_run0_shard1",
+      "[launch] gpu=4 pid=88759 Qwen3-4B_aime2025_zoomkv_run0_shard0",
+      "[launch] gpu=4 pid=88779 Qwen3-4B_aime2025_zoomkv_run0_shard1",
+      "[launch] gpu=5 pid=88800 Qwen3-8B_aime2025_zoomkv_run0_shard0",
+      "[launch] gpu=5 pid=88818 Qwen3-8B_aime2025_zoomkv_run0_shard1",
+      "[launch] gpu=6 pid=88840 Qwen3-8B_aime2025_pariskv_run0_shard0",
+      "[launch] gpu=6 pid=88857 Qwen3-8B_aime2025_pariskv_run0_shard1",
+      "[launch] gpu=7 pid=88884 Qwen3-4B_aime2025_pariskv_run0_shard0",
+      "[launch] gpu=7 pid=88933 Qwen3-4B_aime2025_pariskv_run0_shard1",
+      "[exit] Qwen3-4B_aime2025_zoomkv_run0_shard0 rc=0 state=complete",
+      "[exit] Qwen3-4B_aime2025_pariskv_run0_shard0 rc=0 state=complete",
+      "[exit] Qwen3-4B_aime2025_zoomkv_run0_shard1 rc=0 state=complete",
+      "[exit] Qwen3-4B_math500_zoomkv_run0_shard1 rc=0 state=complete",
+      "[exit] Qwen3-8B_aime2025_zoomkv_run0_shard0 rc=0 state=complete",
+      "[exit] Qwen3-4B_math500_zoomkv_run0_shard0 rc=0 state=complete",
+      "[signal] received 15; terminating workers",
+      "[exit] Qwen3-8B_math500_zoomkv_run0_shard0 rc=-15 state=failed",
+      "[exit] Qwen3-4B_math500_pariskv_run0_shard0 rc=-15 state=failed",
+      "[exit] Qwen3-4B_math500_pariskv_run0_shard1 rc=-15 state=failed",
+      "[exit] Qwen3-8B_aime2025_zoomkv_run0_shard1 rc=-15 state=failed",
+      "[exit] Qwen3-8B_aime2025_pariskv_run0_shard0 rc=-15 state=failed",
+      "[exit] Qwen3-8B_aime2025_pariskv_run0_shard1 rc=-15 state=failed"
+    ]
+  },
+  "cells": [
+    {
+      "model": "Qwen3-4B-Thinking-2507",
+      "method": "zoomkv",
+      "dataset": "math500",
+      "metric": "pass@1",
+      "run_id": 0,
+      "seed": 42,
+      "status": "complete",
+      "unique_expected_qids": 500,
+      "expected_qids": 500,
+      "coverage_percent": 100.0,
+      "missing_qid_count": 0,
+      "missing_qid_ranges": [],
+      "unexpected_qids": [],
+      "correct_problem_count": 464.0,
+      "diagnostic_accuracy_percent": 92.8,
+      "publishable_accuracy_percent": 92.8,
+      "overlapping_qids_with_conflicting_records": [],
+      "sources": [
+        {
+          "path": "qwen3_4b_thinking2507/zoomkv/math500/Qwen3-4B_math500_zoomkv_run0.jsonl",
+          "bytes": 3235087,
+          "sha256": "5fed07f09553888f7340992b911a5ef7029a750d3abd95eb6aaf0bdb179b4c96",
+          "mtime_utc": "2026-10-11T13:49:33.237050+00:00",
+          "json_rows": 101,
+          "malformed_lines_skipped": 0
+        },
+        {
+          "path": "qwen3_4b_thinking2507/zoomkv/math500/Qwen3-4B_math500_zoomkv_run0.shard0-of-2.jsonl",
+          "bytes": 6690008,
+          "sha256": "a1f1c5c36b26e36bcb344c7973dc496028cbb8d98f01386b183c037c1815112f",
+          "mtime_utc": "2026-10-12T03:49:31.756328+00:00",
+          "json_rows": 199,
+          "malformed_lines_skipped": 0
+        },
+        {
+          "path": "qwen3_4b_thinking2507/zoomkv/math500/Qwen3-4B_math500_zoomkv_run0.shard1-of-2.jsonl",
+          "bytes": 5001347,
+          "sha256": "f6e47a3ed7fbaeda4f53862a6a1df2488d01493ebc09e7a4ae7dc67420b4c7a7",
+          "mtime_utc": "2026-10-12T00:57:22.317197+00:00",
+          "json_rows": 200,
+          "malformed_lines_skipped": 0
+        }
+      ]
+    },
+    {
+      "model": "Qwen3-4B-Thinking-2507",
+      "method": "zoomkv",
+      "dataset": "aime2025",
+      "metric": "pass@8",
+      "run_id": 0,
+      "seed": 42,
+      "status": "complete",
+      "unique_expected_qids": 30,
+      "expected_qids": 30,
+      "coverage_percent": 100.0,
+      "missing_qid_count": 0,
+      "missing_qid_ranges": [],
+      "unexpected_qids": [],
+      "correct_problem_count": 22.0,
+      "diagnostic_accuracy_percent": 73.33333333333333,
+      "publishable_accuracy_percent": 73.33333333333333,
+      "overlapping_qids_with_conflicting_records": [],
+      "sources": [
+        {
+          "path": "qwen3_4b_thinking2507/zoomkv/aime2025/Qwen3-4B_aime2025_zoomkv_run0.jsonl",
+          "bytes": 2469659,
+          "sha256": "1b85c454f13435879d0cacbc3aed81b208cae3aea0a2e66665a866e1d92f1b01",
+          "mtime_utc": "2026-10-11T12:33:33.173059+00:00",
+          "json_rows": 12,
+          "malformed_lines_skipped": 0
+        },
+        {
+          "path": "qwen3_4b_thinking2507/zoomkv/aime2025/Qwen3-4B_aime2025_zoomkv_run0.shard0-of-2.jsonl",
+          "bytes": 2280642,
+          "sha256": "e0b747f71ad14b05a1bf78b8b9f336467955921f4f385903a41ea0a812f3da6c",
+          "mtime_utc": "2026-10-11T18:55:32.064515+00:00",
+          "json_rows": 9,
+          "malformed_lines_skipped": 0
+        },
+        {
+          "path": "qwen3_4b_thinking2507/zoomkv/aime2025/Qwen3-4B_aime2025_zoomkv_run0.shard1-of-2.jsonl",
+          "bytes": 3195961,
+          "sha256": "ebe970d1fa74598ba88a012c20e0d01290d79874085ece7ceca6dc6893085e09",
+          "mtime_utc": "2026-10-11T21:45:29.385703+00:00",
+          "json_rows": 9,
+          "malformed_lines_skipped": 0
+        }
+      ]
+    },
+    {
+      "model": "Qwen3-4B-Thinking-2507",
+      "method": "pariskv",
+      "dataset": "math500",
+      "metric": "pass@1",
+      "run_id": 0,
+      "seed": 42,
+      "status": "stopped_incomplete",
+      "unique_expected_qids": 337,
+      "expected_qids": 500,
+      "coverage_percent": 67.4,
+      "missing_qid_count": 163,
+      "missing_qid_ranges": [
+        "284",
+        "286",
+        "288",
+        "290",
+        "292",
+        "294",
+        "296",
+        "298",
+        "300",
+        "302",
+        "304",
+        "306",
+        "308",
+        "310",
+        "312",
+        "314",
+        "316",
+        "318",
+        "320",
+        "322",
+        "324",
+        "326",
+        "328",
+        "330",
+        "332",
+        "334",
+        "336",
+        "338",
+        "340",
+        "342",
+        "344",
+        "346",
+        "348",
+        "350",
+        "352",
+        "354",
+        "356",
+        "358",
+        "360",
+        "362",
+        "364",
+        "366",
+        "368",
+        "370",
+        "372",
+        "374",
+        "376",
+        "378",
+        "380",
+        "382",
+        "384",
+        "386",
+        "388",
+        "390-499"
+      ],
+      "unexpected_qids": [],
+      "correct_problem_count": 312.0,
+      "diagnostic_accuracy_percent": 92.58160237388724,
+      "publishable_accuracy_percent": null,
+      "overlapping_qids_with_conflicting_records": [],
+      "sources": [
+        {
+          "path": "qwen3_4b_thinking2507/pariskv/math500/Qwen3-4B_math500_pariskv_run0.jsonl",
+          "bytes": 2240160,
+          "sha256": "ba0d1e0ef3373cb70045c9d55f591142b045c0143e6c77105118ad1ae38744c3",
+          "mtime_utc": "2026-10-11T13:47:41.532726+00:00",
+          "json_rows": 70,
+          "malformed_lines_skipped": 0
+        },
+        {
+          "path": "qwen3_4b_thinking2507/pariskv/math500/Qwen3-4B_math500_pariskv_run0.shard0-of-2.jsonl",
+          "bytes": 4650654,
+          "sha256": "2da9fdc7fe144872529b3b317cbd8ea6b14819c3408eab5acaecb1a0a2893c05",
+          "mtime_utc": "2026-10-12T03:35:43.051367+00:00",
+          "json_rows": 107,
+          "malformed_lines_skipped": 0
+        },
+        {
+          "path": "qwen3_4b_thinking2507/pariskv/math500/Qwen3-4B_math500_pariskv_run0.shard1-of-2.jsonl",
+          "bytes": 4654688,
+          "sha256": "ca98bfa1211d3cc85b62e06a91232f33d33715592538b1c0989bb5f24f55cec6",
+          "mtime_utc": "2026-10-12T03:38:37.453629+00:00",
+          "json_rows": 160,
+          "malformed_lines_skipped": 0
+        }
+      ]
+    },
+    {
+      "model": "Qwen3-4B-Thinking-2507",
+      "method": "pariskv",
+      "dataset": "aime2025",
+      "metric": "pass@8",
+      "run_id": 0,
+      "seed": 42,
+      "status": "stopped_incomplete",
+      "unique_expected_qids": 29,
+      "expected_qids": 30,
+      "coverage_percent": 96.66666666666667,
+      "missing_qid_count": 1,
+      "missing_qid_ranges": [
+        "29"
+      ],
+      "unexpected_qids": [],
+      "correct_problem_count": 22.0,
+      "diagnostic_accuracy_percent": 75.86206896551724,
+      "publishable_accuracy_percent": null,
+      "overlapping_qids_with_conflicting_records": [],
+      "sources": [
+        {
+          "path": "qwen3_4b_thinking2507/pariskv/aime2025/Qwen3-4B_aime2025_pariskv_run0.jsonl",
+          "bytes": 1647196,
+          "sha256": "ecac227fc4885c4a507cc3db25f8be967c5167610d695b08baf45525b928938a",
+          "mtime_utc": "2026-10-11T12:16:22.810242+00:00",
+          "json_rows": 9,
+          "malformed_lines_skipped": 0
+        },
+        {
+          "path": "qwen3_4b_thinking2507/pariskv/aime2025/Qwen3-4B_aime2025_pariskv_run0.shard0-of-2.jsonl",
+          "bytes": 2400686,
+          "sha256": "df9fd37d74d6a31a1194a3a8df00e81a13659042763b8a8301840b864b84ee70",
+          "mtime_utc": "2026-10-11T21:31:42.516331+00:00",
+          "json_rows": 10,
+          "malformed_lines_skipped": 0
+        },
+        {
+          "path": "qwen3_4b_thinking2507/pariskv/aime2025/Qwen3-4B_aime2025_pariskv_run0.shard1-of-2.jsonl",
+          "bytes": 3537329,
+          "sha256": "41557d9049701792dce3670645dc002bd1f37ebd43ecb168c3a5e4435c217c2f",
+          "mtime_utc": "2026-10-12T01:22:42.679096+00:00",
+          "json_rows": 10,
+          "malformed_lines_skipped": 0
+        }
+      ]
+    },
+    {
+      "model": "Qwen3-8B",
+      "method": "zoomkv",
+      "dataset": "math500",
+      "metric": "pass@1",
+      "run_id": 0,
+      "seed": 42,
+      "status": "stopped_incomplete",
+      "unique_expected_qids": 143,
+      "expected_qids": 500,
+      "coverage_percent": 28.6,
+      "missing_qid_count": 357,
+      "missing_qid_ranges": [
+        "142",
+        "144-499"
+      ],
+      "unexpected_qids": [],
+      "correct_problem_count": 129.0,
+      "diagnostic_accuracy_percent": 90.20979020979021,
+      "publishable_accuracy_percent": null,
+      "overlapping_qids_with_conflicting_records": [],
+      "sources": [
+        {
+          "path": "qwen3_8b/zoomkv/math500/Qwen3-8B_math500_zoomkv_run0.jsonl",
+          "bytes": 3464001,
+          "sha256": "914234c8730121e3547a6826c1e98b4e4288ba329ba3e60f757c79df1a988efd",
+          "mtime_utc": "2026-10-11T13:52:34.582868+00:00",
+          "json_rows": 30,
+          "malformed_lines_skipped": 0
+        },
+        {
+          "path": "qwen3_8b/zoomkv/math500/Qwen3-8B_math500_zoomkv_run0.shard0-of-2.jsonl",
+          "bytes": 6154689,
+          "sha256": "a697326c42835442735ca1152dc6a233a88047efd08be1279a450e2fc0af208f",
+          "mtime_utc": "2026-10-12T03:41:42.367620+00:00",
+          "json_rows": 56,
+          "malformed_lines_skipped": 0
+        },
+        {
+          "path": "qwen3_8b/zoomkv/math500/Qwen3-8B_math500_zoomkv_run0.shard1-of-2.jsonl",
+          "bytes": 6108590,
+          "sha256": "7fba71b69acc6ccfc5de8f78d666e3d100beed3a91ed837436a18a11d56fd846",
+          "mtime_utc": "2026-10-12T03:44:49.889563+00:00",
+          "json_rows": 57,
+          "malformed_lines_skipped": 0
+        }
+      ]
+    },
+    {
+      "model": "Qwen3-8B",
+      "method": "zoomkv",
+      "dataset": "aime2025",
+      "metric": "pass@8",
+      "run_id": 0,
+      "seed": 42,
+      "status": "stopped_incomplete",
+      "unique_expected_qids": 27,
+      "expected_qids": 30,
+      "coverage_percent": 90.0,
+      "missing_qid_count": 3,
+      "missing_qid_ranges": [
+        "25",
+        "27",
+        "29"
+      ],
+      "unexpected_qids": [],
+      "correct_problem_count": 16.0,
+      "diagnostic_accuracy_percent": 59.25925925925926,
+      "publishable_accuracy_percent": null,
+      "overlapping_qids_with_conflicting_records": [],
+      "sources": [
+        {
+          "path": "qwen3_8b/zoomkv/aime2025/Qwen3-8B_aime2025_zoomkv_run0.jsonl",
+          "bytes": 2669728,
+          "sha256": "4fb32a18961a85db56b5d2989ecbae735d09204daf55d11664fdc968d6b9615f",
+          "mtime_utc": "2026-10-11T12:16:26.802112+00:00",
+          "json_rows": 8,
+          "malformed_lines_skipped": 0
+        },
+        {
+          "path": "qwen3_8b/zoomkv/aime2025/Qwen3-8B_aime2025_zoomkv_run0.shard0-of-2.jsonl",
+          "bytes": 6271689,
+          "sha256": "49567078b1e671daa34357c284370a3c2ee9d5cd4e73a1cf6442883d2c764c4d",
+          "mtime_utc": "2026-10-12T03:12:52.835963+00:00",
+          "json_rows": 11,
+          "malformed_lines_skipped": 0
+        },
+        {
+          "path": "qwen3_8b/zoomkv/aime2025/Qwen3-8B_aime2025_zoomkv_run0.shard1-of-2.jsonl",
+          "bytes": 5658626,
+          "sha256": "551be45584bf9db706e90eb507cb61c54bbc21139c67677c40874202fb1e9406",
+          "mtime_utc": "2026-10-12T01:55:46.866262+00:00",
+          "json_rows": 8,
+          "malformed_lines_skipped": 0
+        }
+      ]
+    },
+    {
+      "model": "Qwen3-8B",
+      "method": "pariskv",
+      "dataset": "math500",
+      "metric": "pass@1",
+      "run_id": 0,
+      "seed": 42,
+      "status": "stopped_incomplete",
+      "unique_expected_qids": 101,
+      "expected_qids": 500,
+      "coverage_percent": 20.2,
+      "missing_qid_count": 399,
+      "missing_qid_ranges": [
+        "98",
+        "100",
+        "102",
+        "104-499"
+      ],
+      "unexpected_qids": [],
+      "correct_problem_count": 88.0,
+      "diagnostic_accuracy_percent": 87.12871287128714,
+      "publishable_accuracy_percent": null,
+      "overlapping_qids_with_conflicting_records": [],
+      "sources": [
+        {
+          "path": "qwen3_8b/pariskv/math500/Qwen3-8B_math500_pariskv_run0.jsonl",
+          "bytes": 2277832,
+          "sha256": "a8ceb4f3ed9ea56a0672e984e5dee961cbfdd2b1c52af811a166d1f6d70617bd",
+          "mtime_utc": "2026-10-11T13:50:05.855976+00:00",
+          "json_rows": 20,
+          "malformed_lines_skipped": 0
+        },
+        {
+          "path": "qwen3_8b/pariskv/math500/Qwen3-8B_math500_pariskv_run0.shard0-of-2.jsonl",
+          "bytes": 4595688,
+          "sha256": "284c5824ce89765890a57bf0ced6f0aaf556e9f864d0559492bdaa349c7566ed",
+          "mtime_utc": "2026-10-12T03:30:02.026795+00:00",
+          "json_rows": 39,
+          "malformed_lines_skipped": 0
+        },
+        {
+          "path": "qwen3_8b/pariskv/math500/Qwen3-8B_math500_pariskv_run0.shard1-of-2.jsonl",
+          "bytes": 4647132,
+          "sha256": "8162117716bf434a77a347d1348265bf92303e87dfa4d9877e6f25e09bcdde6a",
+          "mtime_utc": "2026-10-12T03:44:34.286069+00:00",
+          "json_rows": 42,
+          "malformed_lines_skipped": 0
+        }
+      ]
+    },
+    {
+      "model": "Qwen3-8B",
+      "method": "pariskv",
+      "dataset": "aime2025",
+      "metric": "pass@8",
+      "run_id": 0,
+      "seed": 42,
+      "status": "stopped_incomplete",
+      "unique_expected_qids": 17,
+      "expected_qids": 30,
+      "coverage_percent": 56.666666666666664,
+      "missing_qid_count": 13,
+      "missing_qid_ranges": [
+        "16",
+        "18-29"
+      ],
+      "unexpected_qids": [],
+      "correct_problem_count": 8.0,
+      "diagnostic_accuracy_percent": 47.05882352941177,
+      "publishable_accuracy_percent": null,
+      "overlapping_qids_with_conflicting_records": [],
+      "sources": [
+        {
+          "path": "qwen3_8b/pariskv/aime2025/Qwen3-8B_aime2025_pariskv_run0.jsonl",
+          "bytes": 1652794,
+          "sha256": "4270b819ea4f1cbae21d3d02107d1479364bc7ea3e1ddaf58553970affb594f5",
+          "mtime_utc": "2026-10-11T11:57:43.274487+00:00",
+          "json_rows": 6,
+          "malformed_lines_skipped": 0
+        },
+        {
+          "path": "qwen3_8b/pariskv/aime2025/Qwen3-8B_aime2025_pariskv_run0.shard0-of-2.jsonl",
+          "bytes": 5125071,
+          "sha256": "babad44ad11c97660c1d9ee808afd8cc76e948576837b5a0d50d98ec4c18ca67",
+          "mtime_utc": "2026-10-12T03:35:04.188632+00:00",
+          "json_rows": 5,
+          "malformed_lines_skipped": 0
+        },
+        {
+          "path": "qwen3_8b/pariskv/aime2025/Qwen3-8B_aime2025_pariskv_run0.shard1-of-2.jsonl",
+          "bytes": 4290543,
+          "sha256": "200172cd93911e8d7e33afed5b416c8f7778f76b08376972b79d2c47fa497444",
+          "mtime_utc": "2026-10-12T01:34:05.876950+00:00",
+          "json_rows": 6,
+          "malformed_lines_skipped": 0
+        }
+      ]
+    }
+  ]
+}

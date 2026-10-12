@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+*.so
+*.o
+.ninja_deps
+.ninja_log
+build.ninja
+.pytest_cache/
+.mypy_cache/
+.DS_Store
+
+# Runtime outputs and machine-local assets.
+results/
+models/
+data/
+tmp/
+*.jsonl
+*.summary.json
+*.lock
+
+# Keep the small audited progress artifacts committed.
+!progress/*.json
+!progress/*.log

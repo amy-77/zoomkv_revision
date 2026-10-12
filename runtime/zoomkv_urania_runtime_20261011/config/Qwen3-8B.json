@@ -1,0 +1,60 @@
+{
+    "SuCo": {
+        "static_pattern_start": 4,
+        "static_pattern_end": 512,
+        "core": 22,
+        "nprobe": 150,
+        "cache_unit_size": 8,
+        "cache_cluster_num": 450,
+        "num_subspaces": 16,
+        "cluster_num_per_subspace": 256,
+        "collision_ratio": 0.3,
+        "candidate_ratio": 0.2,
+        "budget_ratio": 0.2
+    },
+    "RetroInfer": {
+        "static_pattern_start": 4,
+        "static_pattern_end": 64,
+        "core": 22,
+        "n_centroids": 8192,
+        "n_segment": 16,
+        "nprobe": 150,
+        "max_compute_cluster_num": 2048,
+        "cache_unit_size": 8,
+        "cache_cluster_num": 450
+    },
+    "PolarANN": {
+        "static_pattern_start": 4,
+        "static_pattern_end": 512,
+        "core": 22,
+        "nprobe": 150,
+        "cache_unit_size": 8,
+        "cache_cluster_num": 450,
+        "polar_m": 8,
+        "polar_K_r": 1,
+        "polar_K_omega": 256,
+        "cache_module": "cache_hub.polar_cache_kivi_quest_density_seperate_kernel",
+        "codebook_path": "",
+        "collision_ratio": 0.3,
+        "candidate_ratio": 0.2,
+        "budget_ratio": 0.2,
+        "dynamic_update_interval": 512,
+        "sink_size": 64,
+        "local_size": 256,
+        "final_topk": 256,
+        "enable_offload": true
+    },
+    "PQ": {
+        "static_pattern_start": 4,
+        "static_pattern_end": 512,
+        "core": 22,
+        "nprobe": 150,
+        "cache_unit_size": 8,
+        "cache_cluster_num": 450,
+        "num_subspaces": 32,
+        "cluster_num_per_subspace": 32,
+        "collision_ratio": 0.3,
+        "candidate_ratio": 0.2,
+        "budget_ratio": 0.2
+    }
+}
